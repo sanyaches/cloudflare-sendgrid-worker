@@ -12,3 +12,18 @@ This repository serves like an example of usage Cloudflare worker to sending dif
 - `npm start` - start wrangler development server
 
 - `npm test` - test wrangler project
+
+## Environment
+
+### Development:
+
+Add `.dev.vars` file to have an access in code, example below:
+
+```
+SENDGRID_API_KEY="YOUR_SENDGRID_API_KEY"
+SITE_HOST="http://localhost:3000"
+```
+
+### Production
+
+Add environment variables by cloudflare worker settings panel
