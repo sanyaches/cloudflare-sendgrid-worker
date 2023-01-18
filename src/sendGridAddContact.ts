@@ -1,18 +1,18 @@
 export default async function sendGridAddContact(email: string, apiKey: string) {
-  const response = await fetch('https://api.sendgrid.com/v3/marketing/contacts', {
+  const response = await fetch("https://api.sendgrid.com/v3/marketing/contacts", {
     body: JSON.stringify({
-      "contacts": [
+      contacts: [
         {
-          "email": email,
-        }
-      ]
+          email: email,
+        },
+      ],
     }),
     headers: {
-      'Authorization': `Bearer ${apiKey}`,
-      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
     },
-    method: 'PUT',
-  })
-  
-  return response.status
+    method: "PUT",
+  });
+
+  return response.status;
 }
